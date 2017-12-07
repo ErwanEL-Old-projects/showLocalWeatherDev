@@ -18,7 +18,7 @@ let request = function () {
         if(xhr.readyState === 4) {
             data = JSON.parse(xhr.responseText);
             temp = data.main.temp;
-            loc.innerText = data.name;
+            loc.innerText = `${data.name}, ${data.sys.country}`;
             state.innerText = `${temp}°C`; 
         }
     };
