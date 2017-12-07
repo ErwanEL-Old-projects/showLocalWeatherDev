@@ -3,6 +3,7 @@
 let loc = document.getElementById("location"); //data.name
 let state = document.getElementById("state"); //state.innerText = `${temp}°C`
 let button = document.getElementById('button');
+let img = document.querySelector('img');
 let url;
 let data;
 let temp;
@@ -35,6 +36,19 @@ let getLocation = function () {
             url = `https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${long}`;
             request();
             convertToFahrenheit();
+            switch (data.weather[0].description) {
+                case "broken clouds":
+                img.src = "file:///C:/Users/leblo/OneDrive/FCC/Projets%20FCC/showTheLocalWeatherApp/amcharts_weather_icons_1.0.0/animated/scattered-cloud-broken-clouds.svg";
+                    break;
+                case "scattered-cloud":
+                img.src = "file:///C:/Users/leblo/OneDrive/FCC/Projets%20FCC/showTheLocalWeatherApp/amcharts_weather_icons_1.0.0/animated/scattered-cloud-broken-clouds.svg";                
+                    break;
+                case "clouds":
+                img.src = "file:///C:/Users/leblo/OneDrive/FCC/Projets%20FCC/showTheLocalWeatherApp/amcharts_weather_icons_1.0.0/animated/cloudy.svg";
+                    break;
+                default:
+                    break;
+            }
         }
     });
 }
