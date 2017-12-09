@@ -30,6 +30,8 @@ function compareSunsetTime() {
             case "clouds":
             img.src = "file:///C:/Users/leblo/OneDrive/FCC/Projets%20FCC/showTheLocalWeatherApp/amcharts_weather_icons_1.0.0/animated/cloudy.svg";
                 break;
+            case "shower rain":
+            img.src = "file:///C:/Users/leblo/OneDrive/FCC/Projets%20FCC/showTheLocalWeatherApp/amcharts_weather_icons_1.0.0/animated/rainy-6.svg"
             default:
                 break;
         }
