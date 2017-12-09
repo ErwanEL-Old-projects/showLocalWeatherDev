@@ -3,6 +3,7 @@
 let loc = document.getElementById("location"); //data.name
 let state = document.getElementById("state"); //state.innerText = `${temp}°C`
 let button = document.getElementById('button');
+const card = document.getElementById('card');
 let img = document.querySelector('img');
 let url;
 let data;
@@ -18,20 +19,19 @@ function compareSunsetTime() {
     let time = date.getTime().toString().slice(0,10);
     time = parseInt(time);
     if (sunset <= time) {
-        img.src = "file:///C:/Users/leblo/OneDrive/FCC/Projets%20FCC/showTheLocalWeatherApp/amcharts_weather_icons_1.0.0/animated/night.svg";
+        img.src = "http://svgshare.com/i/4FW.svg";
+        card.style.backgroundColor = "#004085";
     } else {
         switch (data.weather[0].description) {
             case "broken clouds":
-            img.src = "file:///C:/Users/leblo/OneDrive/FCC/Projets%20FCC/showTheLocalWeatherApp/amcharts_weather_icons_1.0.0/animated/scattered-cloud-broken-clouds.svg";
-                break;
             case "scattered clouds":
-            img.src = "file:///C:/Users/leblo/OneDrive/FCC/Projets%20FCC/showTheLocalWeatherApp/amcharts_weather_icons_1.0.0/animated/scattered-cloud-broken-clouds.svg";                
+            img.src = "http://svgshare.com/i/4E6.svg";                
                 break;
             case "clouds":
-            img.src = "file:///C:/Users/leblo/OneDrive/FCC/Projets%20FCC/showTheLocalWeatherApp/amcharts_weather_icons_1.0.0/animated/cloudy.svg";
+            img.src = "http://svgshare.com/i/4GW.svg";
                 break;
             case "shower rain":
-            img.src = "file:///C:/Users/leblo/OneDrive/FCC/Projets%20FCC/showTheLocalWeatherApp/amcharts_weather_icons_1.0.0/animated/rainy-6.svg"
+            img.src = "http://svgshare.com/i/4G0.svg";
             default:
                 break;
         }
