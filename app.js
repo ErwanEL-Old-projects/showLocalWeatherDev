@@ -12,7 +12,7 @@ let sunset;
 let tempFahrenheit;
 let lat;
 let long;
-let convertToFahrenheit = () => {tempFahrenheit = temp * (9/5) + 32 };
+let convertToFahrenheit = () => {tempFahrenheit = (temp * (9/5) + 32).toString().slice(0,4)};
 
 function compareSunsetTime() {
     let date = new Date();
@@ -43,7 +43,7 @@ let request = function () {
     xhr.onreadystatechange = () => {
         if(xhr.readyState === 4) {
             data = JSON.parse(xhr.responseText);
-            temp = data.main.temp;
+            temp = data.main.temp.toString().slice(0,4)
             loc.innerText = `${data.name}, ${data.sys.country}`;
             state.innerText = `${temp}°C`;
             sunset = data.sys.sunset;
