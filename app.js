@@ -21,6 +21,8 @@ function compareSunsetTime() {
     if (sunset <= time) {
         img.src = "http://svgshare.com/i/4FW.svg";
         card.style.backgroundColor = "#004085";
+        loc.style.color = 'white';
+        state.style.color = 'white';
     } else {
         switch (data.weather[0].description) {
             case "broken clouds":
