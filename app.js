@@ -32,6 +32,9 @@ function compareSunsetTime() {
             case "clouds":
             img.src = "http://svgshare.com/i/4GW.svg";
                 break;
+            case "few clouds":
+            img.src = "http://svgshare.com/i/4L1.svg";
+                break;
             case "shower rain":
             img.src = "http://svgshare.com/i/4G0.svg";
             default:
