@@ -1,0 +1,52 @@
+@import "C:/Users/leblo/AppData/Roaming/npm/node_modules/bootstrap/scss/_functions";
+@import "C:/Users/leblo/AppData/Roaming/npm/node_modules/bootstrap/scss/_variables";
+/********************************************************************                                VARIABLES ********************************************************************/
+// Variable Overrides
+$theme-colors: (
+    "primary":    #02475e,
+    "secondary":  #507a96,
+    "success":    #03a31e,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      #cacaca,
+    "dark":       $dark
+);
+
+// Custom Variables
+$customPrimary: #02475e;
+$customSecondary: #5ab9df;
+$third: #5b87a8;
+$customLight: #cacaca;
+
+$body-bg: #56a0ee;
+
+/********************************************************************
+                                STYLES
+********************************************************************/
+#card {
+    background-color: $customSecondary;
+    border: 2px solid white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 20rem;
+}
+
+.card-img-top {
+    background-color: $customSecondary;
+}
+
+.card-body {
+    color: white;
+    background-color: rgb(231, 177, 76);
+    border-top: white 1px solid;
+    border-radius: 10px;
+}
+
+#state {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+// Bootstrap Sass Imports
+@import"C:/Users/leblo/AppData/Roaming/npm/node_modules/bootstrap/scss/bootstrap";
