@@ -1,5 +1,5 @@
-const loc = document.getElementById("location"), //data.name
-      state = document.getElementById("state"), //state.innerText = `${temp}°C`
+const localLocation = document.getElementById("location"), 
+      stateTemperature = document.getElementById("state"),
       button = document.getElementById('button'),
       card = document.getElementById('card'),
       cardImg = document.querySelector('.card-img-top');
@@ -7,8 +7,9 @@ const loc = document.getElementById("location"), //data.name
 let img = document.querySelector('img'),
     url,
     data,
-    temp,
-    sunset,
+    temperature,
+    sunsetTime,
     tempFahrenheit,
-    lat,
-    long;
+    localPosition,
+    latitude,
+    longitude;

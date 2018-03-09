@@ -2,6 +2,9 @@
 /********************************************************************
                                 STYLES
 ********************************************************************/
+.container h1 {
+  font-family: 'mandali', sans-serif; }
+
 #card {
   background-color: #5ab9df;
   border: 2px solid white;

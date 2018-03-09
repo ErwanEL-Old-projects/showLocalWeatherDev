@@ -24,6 +24,10 @@ $body-bg: #56a0ee;
 /********************************************************************
                                 STYLES
 ********************************************************************/
+.container h1 {
+    font-family: 'mandali', sans-serif;
+}
+
 #card {
     background-color: $customSecondary;
     border: 2px solid white;
