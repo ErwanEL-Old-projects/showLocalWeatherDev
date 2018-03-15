@@ -1,5 +1,5 @@
 //conversion to fahrenheit
-const convertToFahrenheit = () => {tempFahrenheit = (temp * (9/5) + 32).toString().slice(0,4)};
+const convertToFahrenheit = () => {tempFahrenheit = (temperature * (9/5) + 32).toString().slice(0,4)};
 
 //infoUI
 const infoUi = () => {
@@ -8,6 +8,7 @@ const infoUi = () => {
         localLocation.innerText = `${data.name}, ${data.sys.country}`;
         stateTemperature.innerText = `${temperature}°C`;
         sunsetTime = data.sys.sunset;
+        sunriseTime = data.sys.sunrise;
         resolve(sunsetTime);
     })
     return promise;
@@ -19,10 +20,10 @@ const compareSunsetTime = () => {
         let date = new Date();
         let time = date.getTime().toString().slice(0,10);
         time = parseInt(time);
-        if (sunsetTime - time > 0) {
-            dayUi();
-        } else {
+        if (time > sunsetTime || time < sunriseTime) {
             nightUi();
+        } else {
+            dayUi();
         }
         resolve(time);
     })
