@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const rename = require("gulp-rename");
+const babel = require("gulp-babel");
 const uglify = require('gulp-uglify-es').default;
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
@@ -50,6 +51,9 @@ gulp.task("uglify", function () {
     return gulp.src('src/js/*.js')
         .pipe(concat('all.js')) //attention a l'ordre
         .pipe(rename("app.min.js"))
+        // .pipe(babel({
+        //     presets: ['@babel/env']
+        // }))
         .pipe(uglify(/* options */))
         .pipe(gulp.dest("dist/js"))
 });
